@@ -1,6 +1,5 @@
 import java.util.Scanner;
-import java.util.Stack;
-import java.util.Queue;
+import java.util.Deque;
 import java.util.LinkedList;
 
 public class Main {
@@ -11,19 +10,16 @@ public class Main {
         System.out.println("Enter a string:");
         String str = sc.nextLine();
 
-        Stack<Character> stack = new Stack<>();
-        Queue<Character> queue = new LinkedList<>();
+        Deque<Character> deque = new LinkedList<>();
 
         for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            stack.push(ch);
-            queue.add(ch);
+            deque.addLast(str.charAt(i));
         }
 
         boolean isPalindrome = true;
 
-        while (!stack.isEmpty() && !queue.isEmpty()) {
-            if (stack.pop() != queue.remove()) {
+        while (deque.size() > 1) {
+            if (deque.removeFirst() != deque.removeLast()) {
                 isPalindrome = false;
                 break;
             }
