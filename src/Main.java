@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Main{
+class PalindromeChecker {
 
     public boolean checkPalindrome(String str) {
         str = str.replaceAll("\\s+", "").toLowerCase();
