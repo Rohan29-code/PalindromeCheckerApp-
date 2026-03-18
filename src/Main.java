@@ -1,15 +1,16 @@
-public class main {
-
+public class Main{
     public static void main(String[] args) {
+        String str = "madam";
+        String reversed = "";
 
-        System.out.println("=====================================");
-        System.out.println("   Welcome to Palindrome Checker App ");
-        System.out.println("=====================================");
+        for (int i = str.length() - 1; i >= 0; i--) {
+            reversed = reversed + str.charAt(i);
+        }
 
-        System.out.println("Version: 1.0");
-
-        System.out.println("This application checks whether a given string is a palindrome.");
-
-        System.out.println("\nProgram started successfully...");
+        if (str.equals(reversed)) {
+            System.out.println("The string is a palindrome");
+        } else {
+            System.out.println("The string is not a palindrome");
+        }
     }
 }
