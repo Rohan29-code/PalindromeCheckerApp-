@@ -8,13 +8,22 @@ public class Main {
         System.out.println("Enter a string:");
         String str = sc.nextLine();
 
-        String reversed = "";
+        char[] arr = str.toCharArray();
 
-        for (int i = str.length() - 1; i >= 0; i--) {
-            reversed = reversed + str.charAt(i);
+        int start = 0;
+        int end = arr.length - 1;
+        boolean isPalindrome = true;
+
+        while (start < end) {
+            if (arr[start] != arr[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
         }
 
-        if (str.equals(reversed)) {
+        if (isPalindrome) {
             System.out.println("The string is a palindrome");
         } else {
             System.out.println("The string is not a palindrome");
