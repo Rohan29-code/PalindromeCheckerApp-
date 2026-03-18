@@ -83,5 +83,7 @@ public class Main {
         } else {
             System.out.println("The string is not a palindrome.");
         }
+
+        sc.close();
     }
 }
