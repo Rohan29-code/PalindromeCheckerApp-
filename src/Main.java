@@ -1,6 +1,13 @@
-public class Main{
+import java.util.Scanner;
+
+public class Main {
     public static void main(String[] args) {
-        String str = "madam";
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a string:");
+        String str = sc.nextLine();
+
         String reversed = "";
 
         for (int i = str.length() - 1; i >= 0; i--) {
@@ -12,5 +19,7 @@ public class Main{
         } else {
             System.out.println("The string is not a palindrome");
         }
+
+        sc.close();
     }
 }
